@@ -26,6 +26,7 @@ Encore
         background_color: '#266284',
         crossorigin: null, //can be null, use-credentials or anonymous
         theme_color: '#ff0000',
+        display: 'standalone',
         icons: [
           {
             src: 'assets/images/icons/icon.png',
