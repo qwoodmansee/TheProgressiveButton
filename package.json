@@ -1,11 +1,9 @@
 {
-  "homepage": "http://qwoodmansee.github.io/TheProgressiveButton",
   "scripts": {
     "dev": "encore dev --watch",
     "dev-server": "encore dev-server --host 0.0.0.0 --disable-host-check --port 8080",
     "production": "encore production",
-    "predeploy": "yarn run production",
-    "deploy": "gh-pages -d web/TheProgressiveButton"
+    "deploy": "gh-pages-deploy"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
@@ -15,8 +13,16 @@
     "sass-loader": "^7.0.1"
   },
   "dependencies": {
+    "gh-pages-deploy": "^0.5.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "web",
+    "prep": [
+      "production"
+    ],
+    "noprompt": false
   }
 }
