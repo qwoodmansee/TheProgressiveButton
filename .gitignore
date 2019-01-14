@@ -1,4 +1,5 @@
 node_modules/
-web/build
-web/TheProgressiveButton
+web/**
+web/*
+web/
 .DS_Store

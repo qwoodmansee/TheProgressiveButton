@@ -6,7 +6,9 @@ import { createSecureContext } from 'tls';
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js').then(registration => {
+    navigator.serviceWorker.register('./service-worker.js', {
+      scope: '/'
+    }).then(registration => {
       console.log('SW registered: ', registration);
     }).catch(registrationError => {
       console.log('SW registration failed: ', registrationError);
@@ -33,7 +35,7 @@ class TheButton extends React.Component {
   }
 
   render() {
-    const currentPoke = this.state.pokemon != '' ? <h1 className="white-text">Current Pokemon: {this.state.pokemon}</h1> : <h1>You haven't pressed the button yet!</h1>;
+    const currentPoke = this.state.pokemon != '' ? <h1 className="white-text">Current Pokemon: {this.state.pokemon}</h1> : <h1 className="white-text">You haven't pressed the button yet!</h1>;
     return (
       <div>
         <button className="button pokeball center" onClick={() => this.getPokemon()}><div className="pokeball-button"></div></button>
