@@ -8,6 +8,9 @@ encore
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!encore.isProduction())
     .enableVersioning(encore.isProduction())
-    .enableSassLoader();
+    .enableSassLoader()
+    .enableReactPreset();
+
+console.log(encore.getWebpackConfig());
 
 module.exports = encore.getWebpackConfig();
