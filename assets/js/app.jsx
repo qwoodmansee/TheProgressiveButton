@@ -36,7 +36,7 @@ class TheButton extends React.Component {
     const currentPoke = this.state.pokemon != '' ? <h1 className="white-text">Current Pokemon: {this.state.pokemon}</h1> : <h1>You haven't pressed the button yet!</h1>;
     return (
       <div>
-        <a href="#" className="button-3d center" onClick={() => this.getPokemon()}>Get A Word</a>
+        <button className="button pokeball center" onClick={() => this.getPokemon()}><div className="pokeball-button"></div></button>
         {currentPoke}
       </div>
     );
