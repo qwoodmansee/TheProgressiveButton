@@ -5,7 +5,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest')
 
 Encore
     .setOutputPath('web/')
-    .setPublicPath('/')
+    .setPublicPath('./')
     .addEntry('app', './assets/js/app.jsx')
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
